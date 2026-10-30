@@ -9,6 +9,7 @@ function loadMinutes() {
 const FOCUS_SECONDS = loadMinutes() * 60;
 
 const timeEl = document.getElementById('time');
+const clockEl = document.getElementById('clock');
 const startBtn = document.getElementById('start');
 const stopBtn = document.getElementById('stop');
 const resetBtn = document.getElementById('reset');
@@ -43,7 +44,13 @@ function resetTimer() {
   render();
 }
 
+function renderClock() {
+  clockEl.textContent = new Date().toLocaleTimeString('ko-KR', { hour12: false });
+}
+
 render();
+renderClock();
+setInterval(renderClock, 1000);
 
 startBtn.onclick = startTimer;
 stopBtn.onclick = stopTimer;

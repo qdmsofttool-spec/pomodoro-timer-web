@@ -30,6 +30,13 @@ h1 {
   color: #d64541;
 }
 
+.clock {
+  margin-top: -16px;
+  font-size: 1.25rem;
+  color: #8a7773;
+  font-variant-numeric: tabular-nums;
+}
+
 .time {
   font-size: 6rem;
   font-weight: 700;
